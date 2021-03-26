@@ -1,11 +1,10 @@
 <?php
 /**
- * Plugin Name: MovTrans cálculo de frete
- * Plugin URI: https://smartlog.com.br
- * Description: Este plugin realiza a integração entre o sistema de fretes MovTrans e o Woocommerce. Para que ele funciona é necessário que o cliente tenha uma conta na plataforma MovTrans.
+ * Plugin Name: Smartlog cálculo de frete
+ * Plugin URI: https://smartlog.tec.br
+ * Description: Este plugin realiza a integração entre o sistema de fretes Smartlog e o Woocommerce. Para que ele funciona é necessário que o cliente tenha uma conta na plataforma Smartlog
  * Version: 1.0
- * Author: Vinicius Verner
- * Author URI: https://vverner.com
+ * Author: Jucelino Junior
  **/
 
   # Integração
