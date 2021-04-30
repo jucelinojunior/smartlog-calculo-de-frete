@@ -5,7 +5,7 @@ Plugin que faz a integração entre o WooCommerce e o Sistema Smartlog
 
 [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0.html)
 
-Texto completo em [LICENS]smartlog-calculo-de-frete/LICENSE).
+Texto completo em [LICENSE.txt]smartlog-calculo-de-frete/LICENSE.txt).
 
 ## Desenvolvimento
 
