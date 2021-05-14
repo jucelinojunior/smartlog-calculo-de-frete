@@ -9,7 +9,7 @@ function smartlog_shipping_method() {
          public function __construct() {
 
          $this->id                  = 'smartlog_frete'; 
-         $this->method_title        = __( 'Entrega pela Gollog', 'smartlog_frete' );  
+         $this->method_title        = __( 'eGollog (de 3 a 6 dias)', 'smartlog_frete' );  
          $this->method_description  = __( 'Cálculo de frete da empresa Smartlog', 'smartlog_frete' ); 
          $this->availability        = 'including';
          $this->countries           = array('BR');
