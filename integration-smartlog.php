@@ -17,7 +17,7 @@ function smartlog_shipping_method() {
          $this->init();
 
          $this->enabled = isset( $this->settings['enabled'] ) ? $this->settings['enabled'] : 'no';
-         $this->title = isset( $this->settings['title'] ) ? $this->settings['title'] : __( 'Entrega pela Gollog', 'smartlog_frete' );
+         $this->title = isset( $this->settings['title'] ) ? $this->settings['title'] : __( 'eGollog (de 3 a 6 dias)', 'smartlog_frete' );
          }
 
          # Carregar e inserir dados da API no Woo
