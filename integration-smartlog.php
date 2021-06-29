@@ -9,7 +9,7 @@ function smartlog_shipping_method() {
          public function __construct() {
 
          $this->id                  = 'smartlog_frete'; 
-         $this->method_title        = __( 'e-Gollog', 'smartlog_frete' );  
+         $this->method_title        = __( 'Gollog', 'smartlog_frete' );  
          $this->method_description  = __( 'Cálculo de frete da empresa Smartlog', 'smartlog_frete' ); 
          $this->availability        = 'including';
          $this->countries           = array('BR');
@@ -17,7 +17,7 @@ function smartlog_shipping_method() {
          $this->init();
 
          $this->enabled = isset( $this->settings['enabled'] ) ? $this->settings['enabled'] : 'no';
-         $this->title = isset( $this->settings['title'] ) ? $this->settings['title'] : __( 'e-Gollog', 'smartlog_frete' );
+         $this->title = isset( $this->settings['title'] ) ? $this->settings['title'] : __( 'Gollog', 'smartlog_frete' );
          }
 
          # Carregar e inserir dados da API no Woo
