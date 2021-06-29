@@ -125,7 +125,7 @@ function smartlog_shipping_method() {
                   $cost = (float)$result['dados'];
                   $rate = array(
                      'id' => $this->id,
-                     'label' => $this->title.$result['prazo'],
+                     'label' => $result['message'].$result['prazo'],
                      'cost' => $cost
                   );
                   $this->add_rate( $rate );
