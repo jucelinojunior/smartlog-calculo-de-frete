@@ -113,16 +113,8 @@ function smartlog_shipping_method() {
 
                $result = json_decode($result, true);
 
-               if(!$result['success']){
-
-                  $message = __( 'Ops! CEP não atendido pela unidade', 'smartlog_frete' );
-                  $messageType = "error";
-                  if( ! wc_has_notice( $message, $messageType ) ) {
-                     wc_add_notice( $message, $messageType );
-                  }
-
-               }else{
-                  $cost = (float)$result['dados'];
+               if($result['success']){
+                   $cost = (float)$result['dados'];
                   $rate = array(
                      'id' => $this->id,
                      'label' => $result['message'].$result['prazo'],
