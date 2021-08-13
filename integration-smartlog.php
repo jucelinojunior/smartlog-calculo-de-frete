@@ -67,42 +67,6 @@ function smartlog_shipping_method() {
             );
          }
          
-         #função para extrair as dimensões
-         protected function get_package_data() {
-              $count = 0;
-              $height = array();
-              $width = array();
-              $length = array();
-              $weight = array();
-             
-              foreach ($this->package['contents'] as $item_id => $values) {
-                  $product = $values['data'];
-                  $qty = $values['quantity'];
-                  if ($qty > 0 && $product->needs_shipping()) {
-                      $_height = wc_get_dimension($this->fix_format($product->height), 'cm');
-                      $_width = wc_get_dimension($this->fix_format($product->width), 'cm');
-                      $_length = wc_get_dimension($this->fix_format($product->length), 'cm');
-                      $_weight = wc_get_weight($this->fix_format($product->weight), 'kg');
-                      $height[$count] = $_height;
-                      $width[$count] = $_width;
-                      $length[$count] = $_length;
-                      $weight[$count] = $_weight;
-                      if ($qty > 1) {
-                          $n = $count;
-                          for ($i = 0; $i < $qty; $i++) {
-                              $height[$n] = $_height;
-                              $width[$n] = $_width;
-                              $length[$n] = $_length;
-                              $weight[$n] = $_weight;
-                              $n++;
-                          }
-                          $count = $n;
-                      }
-                      $count++;
-                  }
-              }
-              return array('height' => array_values($height), 'length' => array_values($length), 'width' => array_values($width), 'weight' => array_sum($weight));
-          }
 
          # Função para cálculo do frete
          public function calculate_shipping( $package = array() ) {
@@ -137,10 +101,10 @@ function smartlog_shipping_method() {
                $vol =  $woocommerce->cart->cart_contents_count;
                $valor = $woocommerce->cart->cart_contents_total;
                $valor = number_format($valor, 0);
-               $dim = get_package_data();
-               $larg = $dim['width'];
-               $alt = $dim['height'];
-               $comp = $dim['length'];
+               //$dim = get_package_data();
+               //$larg = $dim['width'];
+               //$alt = $dim['height'];
+               //$comp = $dim['length'];
 
                # Dados da API
                $server = "http://api.sistemasmartlog.com.br/WooCommerce.php?token=$tk&unid=$unidade&cnpj=$empresa&cep_origem=$origem&cep_destino=$destino&peso=$peso&valor=$valor&vol=$vol&larg=$larg&alt=$alt&comp=$comp";
