@@ -134,7 +134,7 @@ function smartlog_shipping_method() {
                   $peso = $peso / 1000;
                }
                $peso = number_format($peso, 0);
-               $vol =  $woocommerce->cart->cart_contents_count
+               $vol =  $woocommerce->cart->cart_contents_count;
                $valor = $woocommerce->cart->cart_contents_total;
                $valor = number_format($valor, 0);
                $dim = get_package_data();
